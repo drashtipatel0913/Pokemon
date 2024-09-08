@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import Pagination from './Pagination';
 import './App.css'; // Import custom styles
@@ -62,7 +63,9 @@ function App() {
 
   return (
     <div className="container mt-5">
-      <h1 className="text-center mb-4 pokemon-font">Pokémon</h1>
+      <Link to="/" className='text-decoration-none'>
+        <h1 className="text-center mb-4 pokemon-font">Pokémon</h1>
+      </Link>
       <div className="row row-cols-1 row-cols-md-5 g-4">
         {pokemon.map((p, index) => (
           <div key={index} className="col">
